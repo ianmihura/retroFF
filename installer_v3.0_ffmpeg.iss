@@ -65,18 +65,18 @@ Root: HKCR; Subkey: "Directory\Background\shell\RetroFF"; Flags: uninsdeletekey 
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF"; ValueType: string; ValueName: "MUIVerb"; ValueData: Transcode with {#MyAppName}
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF"; ValueType: string; ValueName: "subcommands";
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\1h264"; ValueType: string; ValueData: "To h.264"
-Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\1h264\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -file ""%1"" -preset h264"
+Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\1h264\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -folder . -preset h264"
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\2low"; ValueType: string; ValueData: "To h.264 Low"
-Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\2low\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -file ""%1"" -preset h264_low"
+Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\2low\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -folder . -preset h264_low"
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\3dnxhd"; ValueType: string; ValueData: "To DNxHD"
-Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\3dnxhd\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -file ""%1"" -preset dnxhd"
+Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\3dnxhd\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -folder . -preset dnxhd"
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\4xdcam"; ValueType: string; ValueData: "To XDCAM"
-Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\4xdcam\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -file ""%1"" -preset xdcam"
+Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\4xdcam\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -folder . -preset xdcam"
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\5custom"; ValueType: string; ValueData: "To Custom Preset"
-Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\5custom\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -file ""%1"" -preset custom"
+Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\5custom\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -folder . -preset custom"
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\9logs"; ValueType: dword; ValueName: CommandFlags; ValueData: 00000032
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\9logs"; ValueType: string; ValueData: "To h.264 - with Logs"
-Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\9logs\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -file ""%1"" -preset h264 -log"
+Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\9logs\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -folder . -preset h264 -log"
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\runas"; ValueType: dword; ValueName: CommandFlags; ValueData: 00000050
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\runas"; ValueType: string; ValueData: "Advanced settings"
 Root: HKCR; Subkey: "Directory\Background\shell\RetroFF\shell\runas\command"; ValueType: string; ValueData: "cmd /c start /wait /b retroFF -config"
