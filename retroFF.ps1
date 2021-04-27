@@ -62,7 +62,7 @@ $ffOutContainer = $settings.preset.$preset.container
 
 $input_containers = $settings.array.input_containers
 
-$max_instances = $settings.int.max_instances
+$max_instances = $settings.string.max_instances
 $overwrite = $settings.bool.overwrite
 $log = $log -or $settings.bool.log
 
@@ -108,6 +108,7 @@ function ProcessFile {
 }
 
 function ProcessFolder {
+    Write-Host $max_instances
     Get-ChildItem -Path $folderInputPath -Include $input_containers -Name | ForEach-Object {
         if (!$firstTime) {
             while ((Get-Process -Name ffmpeg | Measure-Object | Select-Object -ExpandProperty Count) -ge $max_instances) { 
