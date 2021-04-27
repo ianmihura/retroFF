@@ -1,5 +1,6 @@
 dist
 build
+Output
 __pycache__
 ffmpeg.exe
 ffprobe.exe
