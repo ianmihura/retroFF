@@ -1,0 +1,1 @@
+Invoke-ps2exe .\retroff.ps1 .\retroff.exe
