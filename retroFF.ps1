@@ -34,6 +34,7 @@
 
 
 param (
+    [string] $homedir = "C:\Program Files\RetroFF Ultimate",
     [string] $file, 
     [string] $folder, 
     [switch] $log = $False, 
@@ -45,11 +46,10 @@ param (
 #* INITIALISE VARIABLES
 #*=============================================================================
 
-# $homeDir = ".\"
-$homeDir = "C:\Program Files\RetroFF Ultimate"
+$settingsDir = "$homedir\settings.json"
 
 Try {
-    $settings = Get-Content "$homeDir\settings.json" | ConvertFrom-Json -ErrorAction stop
+    $settings = Get-Content $settingsDir | ConvertFrom-Json -ErrorAction stop
 }
 Catch {
     Write-Host "Cannot read settings file"
@@ -153,7 +153,7 @@ function Transcode {
 if ($config) {
     try {
         Write-Host "Opening settings..."
-        & $homeDir\settings.exe -settings $homeDir\settings.json
+        & $homedir\settings.exe -settings $settingsDir
     }
     catch {
         Write-Host "Error while trying to open settings"

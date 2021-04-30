@@ -1,7 +1,5 @@
-dist
-build
-Output
-__pycache__
-ffmpeg.exe
-ffprobe.exe
-ffplay.exe
+ffmpeg
+installers/Output
+settings/__pycache__
+settings/build
+settings/dist
