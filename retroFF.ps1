@@ -1,12 +1,4 @@
-﻿###################################################################################################
-##                                                                                               ##
-#                                        RETROFF ULTIMATE                                         #
-#             El script transocdifica media con varias instancias de ffmpeg paralelas             #
-#                                     - Superusers Mediapro -                                     #
-##                                                                                               ##
-###################################################################################################
-
-<#
+﻿<#
 .SYNOPSIS
     The script transcodes media with paralel instances of ffmpeg
 .DESCRIPTION
@@ -34,9 +26,9 @@
 
 
 param (
-    [string] $homedir = "C:\Program Files\RetroFF Ultimate",
     [string] $file, 
     [string] $folder, 
+    [string] $homedir,
     [switch] $log = $False, 
     [string] $preset = "h264", 
     [switch] $config = $False )
@@ -46,6 +38,7 @@ param (
 #* INITIALISE VARIABLES
 #*=============================================================================
 
+$homedir = "C:\Program Files\RetroFF Ultimate"
 $settingsDir = "$homedir\settings.json"
 
 Try {
@@ -108,7 +101,6 @@ function ProcessFile {
 }
 
 function ProcessFolder {
-    Write-Host $max_instances
     Get-ChildItem -Path $folderInputPath -Include $input_containers -Name | ForEach-Object {
         if (!$firstTime) {
             while ((Get-Process -Name ffmpeg | Measure-Object | Select-Object -ExpandProperty Count) -ge $max_instances) { 
@@ -139,7 +131,7 @@ function Transcode {
 
     $ffmpegArgs = " -n -i `"$fileInput`" $ffOptions `"$fileOutput`""
 
-    Write-Host "Intentando codificar... $_"
+    Write-Host "Intentando codificar... $fileInput"
 
     if ($log) { Start-Process -FilePath ffmpeg -ArgumentList $ffmpegArgs -RedirectStandardError $logFile }
     else { Start-Process -FilePath ffmpeg -ArgumentList $ffmpegArgs }
