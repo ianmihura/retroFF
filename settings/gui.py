@@ -1,6 +1,4 @@
-import sys,os
 from tkinter import *
-from tkinter.ttk import Combobox
 
 import i18n
 import xfile
@@ -152,7 +150,7 @@ def init_tk(_settings_url, _settings):
 
     btn_save_preset = Button(p_frame, text=i18n.SAVE_PRESET, command=lambda:on_btn_save_preset(t_options, t_container, t_selected_preset))
     btn_save_preset.pack(side=LEFT, pady=5, padx=10)
-    btn_restore_preset = Button(p_frame, text=i18n.RESTORE_PRESET, command=lambda:on_btn_restore_preset(t_options, t_container, selected_preset_id))
+    btn_restore_preset = Button(p_frame, text=i18n.RESTORE_PRESET, command=lambda:on_btn_restore_preset(t_options, t_container, t_selected_preset))
     btn_restore_preset.pack(side=LEFT, pady=5, padx=10)
     
     # General buttons & config

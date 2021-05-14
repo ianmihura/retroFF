@@ -1,4 +1,3 @@
-import sys,os
 import json
 
 import i18n
