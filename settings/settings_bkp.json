@@ -18,7 +18,7 @@
             "container": ".mp4"
         },
         "dnxhd": {
-            "options": "-c:v dnxhd -vf \"scale=1920:1080,fps=25,format=yuv422p\" -b:v 120M -flags +ildct -c:a pcm_s24le",
+            "options": "-map 0:v -map 0:a:0? -map 0:a:1? -map 0:a:2? -map 0:a:3? -map 0:a:4? -map 0:a:5? -map 0:a:6? -map 0:a:7? -c:v dnxhd -vf \"scale=1920:1080,fps=25,format=yuv422p\" -b:v 120M -flags +ildct -ar 48000 -c:a pcm_s24le",
             "container": ".mxf"
         },
         "xdcam": {
@@ -40,7 +40,7 @@
             "container": ".mp4"
         },
         "dnxhd": {
-            "options": "-c:v dnxhd -vf \"scale=1920:1080,fps=25,format=yuv422p\" -b:v 120M -flags +ildct -c:a pcm_s24le",
+            "options": "-map 0:v -map 0:a:0? -map 0:a:1? -map 0:a:2? -map 0:a:3? -map 0:a:4? -map 0:a:5? -map 0:a:6? -map 0:a:7? -c:v dnxhd -vf \"scale=1920:1080,fps=25,format=yuv422p\" -b:v 120M -flags +ildct -ar 48000 -c:a pcm_s24le",
             "container": ".mxf"
         },
         "xdcam": {

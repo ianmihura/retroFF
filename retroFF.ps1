@@ -15,8 +15,6 @@
         <Transcodes file into C:\test\transcoded, and leaves logs in C:\test\logs>
     C:\PS> retroFF.ps1 -file "C:\test\test_video.mxf" -settings
         <Transcodes file into C:\test\transcoded, and leaves logs in C:\test\logs>
-.NOTES
-    Authors: Pablo Mongay, Ian Mihura
 #>
 
 
