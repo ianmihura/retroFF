@@ -34,7 +34,7 @@ $SLEEPTIME = 5
 
 function CheckOpen {
     param ([string] $currentFile)
-    $path = "$folderInputPath\$currentFile" 
+    $path = "$folderInputPath\..\Desktop\tests\$currentFile" 
     $isOpen = 0
 
     try {
